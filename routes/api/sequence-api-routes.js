@@ -1,6 +1,9 @@
 const db = require("../../models");
 const router = require("express").Router();
 
+router.route("/")
+console.log("I am alive");
+
 router.route("/sequence")
   .get(function(req, res) {
     // 1. Add a join to include all of each Author's Posts
