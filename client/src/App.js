@@ -54,7 +54,7 @@ class App extends Component {
                 <AsanaPage />}
             />
 
-<Route
+              <Route
               exact path="/selected"
               render={() =>
                 <SelectedPage />}
