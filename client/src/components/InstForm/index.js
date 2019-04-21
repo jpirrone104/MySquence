@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
-import axios from 'axios';
+import {withRouter} from 'react-router-dom';
 import "./style.css";
 
 class InstForm extends Component {
 
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
             
     this.state = {
         username: '',
@@ -49,7 +49,7 @@ handleSubmit(event) {
   })
 //   .then((response) => response.json())
   .then((res) => {console.log(res) });
-    
+  this.props.history.push('/login')
 
     
 }
@@ -129,5 +129,5 @@ render() {
 
 }
 
-export default InstForm;
+export default withRouter(InstForm);
 

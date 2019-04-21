@@ -5,14 +5,13 @@ const bodyParser = require('body-parser');
 const md5 = require('md5');
 const db = require("./models");
 const routes = require("./routes");
-// const user = require("./routes/api/user-api-routes")
-// const sequence = require("./routes/api/sequence-api-routes")
+
 // Route requires
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
-app.get("/getData", (req, res) => {//must have the /routeName to work with React front end.
+app.get("/", (req, res) => {//must have the /routeName to work with React front end.
     // console.log("hi");
     res.json({testData:'testData'})
 });
